@@ -21,6 +21,8 @@ public class HomeProduce implements Serializable {
     @TableId
     private String reduceId;
 
+    private String formUser;
+
     /**
      * 物品名
      */
