@@ -8,6 +8,7 @@ import com.tencent.wxcloudrun.entity.HomeProduce;
 * @description 针对表【home_produce】的数据库操作Service
 * @createDate 2022-08-10 21:16:43
 */
+
 public interface HomeProduceService extends IService<HomeProduce> {
 
 }
