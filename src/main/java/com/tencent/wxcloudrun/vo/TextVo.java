@@ -3,26 +3,41 @@ package com.tencent.wxcloudrun.vo;
 import cn.hutool.core.date.DateUtil;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tencent.wxcloudrun.form.TextForm;
-import lombok.Builder;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
-@Data
+import java.util.HashMap;
+import java.util.Map;
+
+@Getter
+@Setter
 @RequiredArgsConstructor
 public class TextVo {
-    @JsonProperty("ToUserName")
+    private Map<String,Object> map = new HashMap<>();
     private final String ToUserName;
-    @JsonProperty("FromUserName")
     private final String FromUserName;
-    @JsonProperty("CreateTime")
     private long CreateTime = DateUtil.current() / 1000;
-    @JsonProperty("MsgType")
     private final String MsgType = "text";
-    @JsonProperty("Content")
     private final String Content;
 
 
-    public static TextVo create(TextForm form, String text) {
-        return new TextVo(form.getToUserName(), form.getFromUserName(), text);
+    public static Map<String,Object> create(TextForm form, String text) {
+        Map<String,Object> map = new HashMap<>();
+        map.put("ToUserName",form.getToUserName());
+        map.put("FromUserName",form.getFromUserName());
+        map.put("CreateTime",DateUtil.current() / 1000);
+        map.put("MsgType","text");
+        map.put("Content",text);
+        return map;
+    }
+
+    @Override
+    public String toString() {
+        return "TextVo{" +
+                "ToUserName='" + ToUserName + '\'' +
+                ", FromUserName='" + FromUserName + '\'' +
+                ", CreateTime=" + CreateTime +
+                ", MsgType='" + MsgType + '\'' +
+                ", Content='" + Content + '\'' +
+                '}';
     }
 }

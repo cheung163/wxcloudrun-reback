@@ -18,7 +18,7 @@ public class CommonHandler {
 
     private final HomeProduceService homeProduceService;
 
-    public TextVo handler(TextForm form) {
+    public Object handler(TextForm form) {
         String msg;
         if (form.getContent().contains("-")) {
             String[] split = form.getContent().split("-");

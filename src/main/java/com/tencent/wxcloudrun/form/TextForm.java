@@ -2,8 +2,11 @@ package com.tencent.wxcloudrun.form;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class TextForm {
 
     @JsonProperty("ToUserName")
@@ -18,4 +21,16 @@ public class TextForm {
     private String Content;
     @JsonProperty("MsgId")
     private long MsgId;
+
+    @Override
+    public String toString() {
+        return "TextForm{" +
+                "ToUserName='" + ToUserName + '\'' +
+                ", FromUserName='" + FromUserName + '\'' +
+                ", CreateTime=" + CreateTime +
+                ", MsgType='" + MsgType + '\'' +
+                ", Content='" + Content + '\'' +
+                ", MsgId=" + MsgId +
+                '}';
+    }
 }
