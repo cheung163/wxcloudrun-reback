@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.reback.mapper.HomeProduceMapper">
+<mapper namespace="com.tencent.wxcloudrun.mapper.HomeProduceMapper">
 
-    <resultMap id="BaseResultMap" type="com.example.reback.entity.HomeProduce">
+    <resultMap id="BaseResultMap" type="com.tencent.wxcloudrun.entity.HomeProduce">
             <id property="reduceId" column="reduce_id" jdbcType="VARCHAR"/>
             <result property="produce" column="produce" jdbcType="VARCHAR"/>
             <result property="address" column="address" jdbcType="VARCHAR"/>
