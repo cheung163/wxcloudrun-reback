@@ -22,8 +22,8 @@ public class TextVo {
 
     public static Map<String,Object> create(TextForm form, String text) {
         Map<String,Object> map = new HashMap<>();
-        map.put("ToUserName",form.getToUserName());
-        map.put("FromUserName",form.getFromUserName());
+        map.put("ToUserName",form.getFromUserName());
+        map.put("FromUserName",form.getToUserName());
         map.put("CreateTime",DateUtil.current() / 1000);
         map.put("MsgType","text");
         map.put("Content",text);
