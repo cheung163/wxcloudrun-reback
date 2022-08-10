@@ -34,9 +34,9 @@ public class CommonHandler {
                 homeProduceService.save(homeProduce);
                 msg = "已经替您记好了，我的小主";
             } else {
+                msg = "小主，你将" + one.getProduce() + "从" + one.getAddress() + "放到了" + split[1] + "里，真棒";
                 one.setAddress(split[1]);
                 one.setCreatetime(new Date());
-                msg = "小主，你将" + one.getProduce() + "从" + one.getAddress() + "放到了" + split[1] + "里，真棒";
                 homeProduceService.updateById(one);
             }
         } else {
