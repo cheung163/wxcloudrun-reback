@@ -43,7 +43,7 @@ public class CommonHandler {
             QueryWrapper<HomeProduce> qw = new QueryWrapper<>();
             qw.eq("produce", form.getContent());
             HomeProduce one = homeProduceService.getOne(qw, false);
-            if (one != null) {
+            if (one == null) {
                 msg = "没记得您告诉过我呐，请小主再好好想想！";
             } else {
                 msg = "小主，您的" + form.getContent() + "放在" + one.getAddress() + "里";
