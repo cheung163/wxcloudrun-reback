@@ -1,9 +1,9 @@
 package com.tencent.wxcloudrun.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.reback.entity.HomeProduce;
-import com.example.reback.mapper.HomeProduceMapper;
-import com.example.reback.service.HomeProduceService;
+import com.tencent.wxcloudrun.entity.HomeProduce;
+import com.tencent.wxcloudrun.mapper.HomeProduceMapper;
+import com.tencent.wxcloudrun.service.HomeProduceService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 */
 @Service
 public class HomeProduceServiceImpl extends ServiceImpl<HomeProduceMapper, HomeProduce>
-    implements HomeProduceService{
+    implements HomeProduceService {
 
 }
 

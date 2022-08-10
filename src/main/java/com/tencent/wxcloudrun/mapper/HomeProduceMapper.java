@@ -1,7 +1,7 @@
 package com.tencent.wxcloudrun.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.reback.entity.HomeProduce;
+import com.tencent.wxcloudrun.entity.HomeProduce;
 
 /**
 * @author 10058

@@ -1,7 +1,7 @@
 package com.tencent.wxcloudrun.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.reback.entity.HomeProduce;
+import com.tencent.wxcloudrun.entity.HomeProduce;
 
 /**
 * @author 10058
