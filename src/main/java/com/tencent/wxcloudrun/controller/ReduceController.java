@@ -20,9 +20,10 @@ public class ReduceController {
         Map<String,Object> map = new HashMap<>();
         map.put("ToUserName", req.get("ToUserName"));
         map.put("FromUserName", req.get("FromUserName"));
-        map.put("CreateTime", DateUtil.current());
-        map.put("MsgType", req.get("text"));
-        map.put("Content", req.get("你好"));
+        map.put("CreateTime", DateUtil.current()/1000);
+        map.put("MsgType", "text");
+        map.put("Content", "你好");
         return map;
     }
+
 }
